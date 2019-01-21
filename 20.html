@@ -1,0 +1,13 @@
+<script>
+	function genId(n) {
+var id = "";
+var sample = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+for (var i = 0; i < n; i++) {
+var x = Math.floor((Math.random() * 62));
+id = id.concat(sample[x]);
+}
+return id;
+}
+
+console.log(genId(7));
+</script>

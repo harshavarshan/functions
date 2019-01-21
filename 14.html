@@ -1,0 +1,30 @@
+<script>
+	function amountToCoins(amount, coins) {
+
+total = amount;
+x = 0;
+usedCoins = [];
+
+for (var i = 0; i < amount; i++) {
+
+if ((total - coins[x]) >= 0) {
+
+total = total - coins[x];
+usedCoins.push(coins[x]);
+
+} else {
+
+if (x < coins.length - 1) {
+x++;
+
+} else {
+
+break;
+}
+}
+}
+return usedCoins;
+}
+
+console.log(amountToCoins(94, [50, 25, 10, 5, 2, 1]));
+</script>

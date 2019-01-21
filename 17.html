@@ -1,0 +1,17 @@
+<script>
+	function countLetters(sent) {
+    let arr = sent.toLowerCase().split('');
+
+    return arr.filter(letter => letter != ' ')
+        .reduce((obj, letter) => {
+            if (obj[letter] == undefined) {
+                obj[letter] = 1;
+            } else {
+                obj[letter]++;
+            }
+            return obj;
+        }, {});
+}
+const sent1 = 'If Purple People Eaters are real... where do they find purple people to eat?';
+console.log(countLetters(sent1));
+</script>

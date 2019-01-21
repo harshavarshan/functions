@@ -1,0 +1,9 @@
+<script>
+	const count = (str, char) => {
+    return [].reduce.call(str, (count, letter) => {
+        return letter == char ? ++count : count;
+    }, 0);
+}
+const string = 'I am happy to take your donation; any amount will be greatly appreciated.';
+console.log(count(string, 'a')); 
+</script>

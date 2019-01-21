@@ -1,0 +1,13 @@
+<script>
+	function firstNotRepeted(str) {
+for(var i = 0 ; i < str.length ; i++) {
+var index_temp = str.indexOf(str.charAt(i)) + 1;
+if (str.indexOf(str.charAt(i), index_temp) == -1) {
+return str.charAt(i);
+break;
+}
+}
+}
+
+console.log(firstNotRepeted('abababababacababababa'))
+</script>

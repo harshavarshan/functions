@@ -1,0 +1,22 @@
+<script>
+	function longestSub(str) {
+  const noRepeat = string => {
+    let sub = '';
+    for (let letter of string) {
+        if (!~sub.indexOf(letter)) sub += letter;
+        else break;
+    }
+    return sub;
+};
+    let subsArray = [];
+    for (let i = 0; i < str.length; i++) {
+        let sub = noRepeat(str.substring(i));
+        subsArray.push(sub);
+    }
+    return subsArray.reduce((a, b) => {
+        return a.length > b.length ? a : b;
+    });
+}
+const string = 'https://www.zenrays.com';
+console.log(longestSub(string));
+</script>
